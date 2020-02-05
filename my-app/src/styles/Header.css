@@ -1,0 +1,13 @@
+.everythingInHeader{
+  width: 95%;
+}
+
+.linksInHeader {
+  margin-top:20px;
+  list-style-type: none;
+  display: flex;
+  align-items: stretch; /* Default */
+  justify-content: space-between;
+  width: 95%;
+  text-decoration: none;
+}

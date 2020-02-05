@@ -1,0 +1,9 @@
+.aboutContainer {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.aboutMeParagraph {
+  display: inline-block;
+  text-align: left;
+}
