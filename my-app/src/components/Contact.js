@@ -9,7 +9,7 @@ function Contact() {
       <ul className="linksInHeader">
          <li><a href="https://github.com/fatcatdog">GitHub</a></li>
          <li><a href="https://www.linkedin.com/in/jakeduchen/">LinkedIn</a></li>
-         <li><a href="https://twitter.com/jakeduche">Twitter</a></li>
+         <li><a href="https://twitter.com/jakeduchen">Twitter</a></li>
       </ul>
     <Footer />
     </div>

@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
 import Blogs from './components/Blogs';
+import Blog from './components/Blog';
 // import Header from './components/Header';
 // import Footer from './components/Footer';
 import NoMatchPage from './components/NoMatchPage';
@@ -24,6 +25,7 @@ const routing = (
       <Route exact path="/about" component={About} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/blogs" component={Blogs} />
+      <Route path="/blog/:tag" component={Blog} />
       <Route component={NoMatchPage} />
       </Switch>
 
