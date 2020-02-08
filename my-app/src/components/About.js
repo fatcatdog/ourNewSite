@@ -13,7 +13,7 @@ function About() {
 
       <div className="aboutContainer">
         <div className="aboutMeParagraph">
-          <p>After working in SaaS sales for a few years I realized I wanted to learn how to build digital products and learn to code. I currently work as a developer in the financial services industry in New York City. In my free time I can likely be found playing pickup basketball or biking around New York City. If you are reading this page and you would like to get in touch with me I can be reached on my <a href="https://twitter.com/jakeduchen">@jakeduchen</a></p>
+          <p>After working in software sales for a few years I realized I wanted to learn how to build digital products and learn to code. I currently work as a developer in the financial services industry in the New York area. In my free time I can likely be found playing pickup basketball or staring at a computer screen. If you would like to get in touch with me I can be reached <a href="https://twitter.com/jakeduchen">@jakeduchen</a></p>
       </div>
     </div>
 

@@ -3,7 +3,7 @@
 }
 
 .projectsContainer{
-  width: 75%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -11,9 +11,12 @@
   display: inline-block;
   text-align: left;
 }
-
+.projectTitle{
+  text-align: center;
+}
 .ourListStyles{
   list-style-type: none;
+  font-size: 20px;
 }
 
 @media (min-width:600px) {

@@ -1,4 +1,5 @@
 .everythingInHeader{
+  font-family: 'Karla', sans-serif;
   width: 95%;
 }
 
@@ -9,5 +10,8 @@
   align-items: stretch; /* Default */
   justify-content: space-between;
   width: 95%;
+}
+
+.linksInHeader a:link{
   text-decoration: none;
 }

@@ -7,46 +7,33 @@ import ReactMarkdown from 'react-markdown';
 import { blogsDetails } from '../utils/stuff';
 
    const Blog = (props) => {
-     const[content, setContent] = useState();
-     const[loading, setLoading] = useState(true);
+     const[content, setContent] = useState("Not a null string");
+     // const[loading, setLoading] = useState(true);
 
-      async function getBlogObj(){
-        try{
-          let ourString = props.location.pathname;
-          let ourBlogTag = ourString.slice(6);
-          let ourBlogObj = blogsDetails.filter(obj => {
-            return obj.tag == ourBlogTag;
-          })
-          const theUrl = ourBlogObj[0].ourUrl;
-          var words = theUrl.split("/")
-          console.log(words[2]);
-          require("../blogRepo/" + words[2] + "/index.md");
-          require(`../blogRepo/${ words[2]}/index.md`);
-          fetch("../blogRepo/" + words[2] + "/index.md").then((response) => response.text()).then((response) => {
-             setContent(response);
-          })
-          setLoading(false);
-        } catch (err) {
-          console.log(err)
-        }
-      }
-
+     async function getBlogFromFileSys(){
+       let ourString = props.location.pathname;
+       let ourBlogTag = ourString.slice(6);
+       let ourBlogObj = blogsDetails.filter(obj => {
+         return obj.tag == ourBlogTag;
+       })
+       const theUrl = ourBlogObj[0].ourUrl;
+       var words = theUrl.split("/")
+       let file = await import(`../blogRepo/${words[2]}/index.md`);
+       try{
+         console.log(file.default)
+         fetch(file.default)
+         .then((response) => response.text())
+         .then((response) => {
+            setContent(response);
+         })
+       } catch (err) {
+         console.log(err)
+       }
+     }
 
     useEffect(() => {
-      // if(loading){
-        getBlogObj()
-      // }
-      // fetch(oneBlog).then((response) => response.text()).then((response) => {
-      //    setContent(response)
-      //   // setLoading(false)
-      // })
+        getBlogFromFileSys();
     });
-
-    // if(loading) {
-    //   return(
-    //     <div>Loading...</div>
-    //   )
-    // }
 
     return (
     <div>
@@ -59,7 +46,6 @@ import { blogsDetails } from '../utils/stuff';
           />
         </div>
       </div>
-
       <Footer />
     </div>
   )

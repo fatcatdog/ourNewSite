@@ -11,20 +11,25 @@ const Projects = () => {
     <div>
       <Header />
       <div className="projectsHeader">
-        <h2>Projects</h2>
+        <h2>Personal Projects</h2>
       </div>
       <div className="projectsContainer">
       <div className="listOfProjects">
+        <p>Below are web apps I've built over the last few years:</p>
         <ul className="ourListStyles">
            {data.map(project => (
              <li key={project.name}>
-               {project.name} - {project.description} - <a className="project_link" href={project.url} rel="noreferrer noopener" target="_blank">Repo</a> - <a className="project_link" href={project.demoUrl} rel="noreferrer noopener" target="_blank">Demo</a>
-            <br />
+                <div className="projectTitle">
+                  {project.name}
+                </div>
+                 <br />
+                 <div className="projectDescription">
+                   {project.description}{" - "}<a className="project_link" href={project.url} rel="noreferrer noopener" target="_blank">Repo</a>
+                 </div>
             <br />
            </li>
            ))}
            <br />
-           More on the way ...
          </ul>
       </div>
       </div>
